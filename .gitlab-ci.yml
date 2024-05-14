@@ -1,0 +1,13 @@
+stages:
+  - test
+
+selenium_test:
+  stage: test
+  image: python:latest
+  script:
+    - pip install -r requirements.txt
+    - python login.py  
+    - python ajouter_banque.py
+    - python chnger_pswrd.py
+    - python Demande_de_argant.py
+    - python virement.py
